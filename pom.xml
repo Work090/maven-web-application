@@ -94,16 +94,16 @@
 	</dependencies>
 	
 	<distributionManagement>
-	    <repository>
+	    <releaserepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://34.228.160.159:8081/repository/uat-group/</url>
+	      <url>http://34.228.160.159:8081/repository/uat-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository</name>
-	      <url>http://34.228.160.159:8081/repository/uat-group/</url>
+	      <url>http://34.228.160.159:8081/repository/uat-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
