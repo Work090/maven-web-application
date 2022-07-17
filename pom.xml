@@ -98,7 +98,7 @@
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
 	      <url>http://34.228.160.159:8081/repository/uat-release/</url>
-	    </repository>
+	    </releaserepository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
