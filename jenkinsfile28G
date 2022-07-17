@@ -1,0 +1,30 @@
+node{
+    def mavenHome = tool name: 'maven3.8.6'
+stage ('1CloneCode'){
+    git "https://github.com/AAGGroup/maven-web-application"
+}
+stage ('2Test&Build'){
+    sh "${mavenHome}/bin/mvn install"
+}
+stage ('3CodeQuality'){
+    sh "${mavenHome}/bin/mvn sonar:sonar"
+}
+stage ('4UploadArtifacts'){
+    sh "${mavenHome}/bin/mvn deploy"
+}
+stage ('5Deploy_Uat'){
+    deploy adapters: [tomcat9(credentialsId: 'tomcatcredentials', path: '', url: 'http://3.84.84.139:8080/')], contextPath: null, war: 'target/*war'
+}
+stage ('6Approval'){
+    timeout(time: 9, unit: 'HOURS') {
+    input message: 'Application ready for deployment, Please review and approve'
+}
+}
+stage ('7Deploy_prod'){
+    deploy adapters: [tomcat9(credentialsId: 'tomcatcredentials', path: '', url: 'http://3.84.84.139:8080/')], contextPath: null, war: 'target/*war'
+    
+}
+stage ('8Notification'){
+    emailext body: 'Please Comment', subject: 'Project_UAT', to: 'admin@admin.com'
+}
+}
