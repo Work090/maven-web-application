@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://172.31.30.216:8081/repository/audi-release/</url>
+	      <url>http://34.228.160.159:8081/repository/bmw-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository</name>
-	      <url>http://172.31.30.216:8081/repository/audi-snapshot/</url>
+	      <url>http://34.228.160.159:8081/repository/bmw-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
