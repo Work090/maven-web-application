@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://34.229.152.166:8081/repository/aagmotors-release/</url>
+	      <url>http://34.228.160.159:8081/repository/aagmotors-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://34.229.152.166:8081/repository/aagmotors-snapshot/</url>
+	      <url>http://34.228.160.159:8081/repository/aagmotors-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
